@@ -23,8 +23,6 @@ def exp(a, b):
     return a ** b
 
 def square_root(a):
-    # Calculates the square root of a number.
-    # Raises ValueError for negative numbers.
     if a < 0:
         raise ValueError("Cannot take the square root of a negative number.")
     return math.sqrt(a)

@@ -14,9 +14,9 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.add(0, 0), 0)
 
     def test_subtract(self):  # 3 assertions
-        self.assertEqual(calculator.sub(10, 4), 6)
-        self.assertEqual(calculator.sub(5, 10), -5)
-        self.assertEqual(calculator.sub(0, 0), 0)
+        self.assertEqual(calculator.subtract(10, 4), 6)
+        self.assertEqual(calculator.subtract(5, 10), -5)
+        self.assertEqual(calculator.subtract(0, 0), 0)
 
     def test_multiply(self):
         self.assertEqual(calculator.mul(3, 4), 12)
@@ -33,21 +33,21 @@ class TestCalculator(unittest.TestCase):
             calculator.div(0, 5)
 
     def test_logarithm(self):  # 3 assertions
-        self.assertEqual(calculator.log(2, 8), 3)
-        self.assertEqual(calculator.log(10, 100), 2)
-        self.assertAlmostEqual(calculator.log(3, 27), 3)
+        self.assertEqual(calculator.logarithm(2, 8), 3)
+        self.assertEqual(calculator.logarithm(10, 100), 2)
+        self.assertAlmostEqual(calculator.logarithm(3, 27), 3)
 
     def test_log_invalid_base(self):  # 1 assertion
         with self.assertRaises(ValueError):
-            calculator.log(1, 5)  # base cannot be 1
+            calculator.logarithm(1, 5)  # base cannot be 1
 
     def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
-            calculator.log(-10, 100)  # Negative base
+            calculator.logarithm(-10, 100)  # Negative base
         with self.assertRaises(ValueError):
-            calculator.log(10, -100)  # Negative number
+            calculator.logarithm(10, -100)  # Negative number
         with self.assertRaises(ValueError):
-            calculator.log(1, 100)  # Base of 1
+            calculator.logarithm(1, 100)  # Base of 1
 
     def test_hypotenuse(self):
         self.assertEqual(calculator.hypotenuse(3, 4), 5)

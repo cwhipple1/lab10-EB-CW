@@ -5,11 +5,14 @@
 import math
 
 def square_root(a):
+    # Calculates the square root of a number.
+    # Raises ValueError for negative numbers.
     if a < 0:
         raise ValueError("Cannot take the square root of a negative number.")
     return math.sqrt(a)
 
 def hypotenuse(a, b):
+    # Calculates the hypotenuse of a right triangle given two sides.
     return math.hypot(a, b)
 
 def add(a, b):

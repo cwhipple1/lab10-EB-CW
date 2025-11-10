@@ -5,7 +5,6 @@
 import unittest
 import calculator
 
-
 class TestCalculator(unittest.TestCase):
     def test_multiply(self):
         self.assertEqual(calculator.mul(3, 4), 12)

@@ -8,7 +8,7 @@ import math
 def add(a, b):
     return a + b
 
-def sub(a, b):
+def subtract(a, b):
     return a - b
 
 def mul(a, b):
@@ -31,7 +31,7 @@ def hypotenuse(a, b):
     # Calculates the hypotenuse of a right triangle given two sides.
     return math.hypot(a, b)
 
-def log(a, b):
+def logarithm(a, b):
     if a <= 0 or a == 1 or b <= 0:
         raise ValueError("Logarithm arguments must be positive, and base cannot be 1.")
     return math.log(b, a)
